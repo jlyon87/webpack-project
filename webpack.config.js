@@ -46,6 +46,9 @@ module.exports = {
 		// Inject script dependencies to index.html for us
 		new HtmlWebpackPlugin({
 			template: "src/index.html"
+		}),
+		new webpack.DefinePlugin({
+			"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
 		})
 	]
 };
